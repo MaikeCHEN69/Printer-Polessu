@@ -1,0 +1,351 @@
+.navbar {
+    background: linear-gradient(90deg, #008000, #006400);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo {
+    height: 50px;
+    width: auto;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.nav-button {
+    color: white;
+    margin: 0 25px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.nav-button:hover {
+    color: #ffd700;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+#home {
+    height: 100vh;
+    padding-top: 120px;
+    background: url('/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+#home .container {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.home-content {
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    /* Кастомные переменные для высоты */
+    height: var(--box-height, auto); /* Значение по умолчанию — auto */
+}
+
+.left-box {
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* Внеси значение высоты здесь, например: 20% или 200px */
+    --box-height: 20%; /* ИЗМЕНИ ЭТО ЗНАЧЕНИЕ ПО СВОЕМУ УСМОТРЕНИЮ */
+}
+
+.center-box {
+    align-items: center;
+    justify-content: center;
+    /* Внеси значение высоты здесь, например: 40% или 400px */
+    --box-height: 40%; /* Исправлено с 9000px на разумное значение */
+}
+
+.right-box {
+    align-items: flex-end;
+    justify-content: flex-end;
+    /* Внеси значение высоты здесь, например: 30% или 300px */
+    --box-height: 30%; /* ИЗМЕНИ ЭТО ЗНАЧЕНИЕ ПО СВОЕМУ УСМОТРЕНИЮ */
+}
+
+#home h1, #home h3, #home p {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Специфичный стиль для центрирования текста в #home */
+.text-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center; /* Центрирование текста внутри .text-content */
+}
+
+section {
+    height: 100vh;
+    padding-top: 120px;
+    background: linear-gradient(135deg, #f0f4f8, #e0e8f0);
+    position: relative;
+    overflow: hidden;
+}
+
+section:nth-child(even) {
+    background: linear-gradient(135deg, #ffffff, #f0f4f8);
+}
+
+.green-box-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.green-box {
+    position: relative;
+    background: linear-gradient(135deg, #007a33, #00994d);
+    color: white !important;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: left; /* Остаётся как есть для #about */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease forwards;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.green-box::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent);
+    z-index: 0;
+    transform: rotate(45deg);
+}
+
+.green-box p {
+    position: relative;
+    z-index: 1;
+    color: white !important;
+    margin-bottom: 0;
+}
+
+.green-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+    font-size: 56px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
+}
+
+h2 {
+    font-size: 40px;
+    color: #008000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out;
+}
+
+h3 {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 18px;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Убран отступ между строками, оставлен только margin-right для "лесенки" */
+.text-step {
+    text-align: left; /* Оставляем по умолчанию, центрирование задано в .text-content */
+    margin-right: 40px; /* Сохранена "лесенка" справа */
+    margin-bottom: 0; /* Убран отступ между строками */
+}
+
+.text-step:first-child {
+    margin-right: 0; /* Первый элемент без отступа справа */
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%23e0e8f0" fill-opacity="0.2" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,85.3C672,75,768,85,864,74.7C960,64,1056,32,1152,32C1248,32,1344,64,1392,80L1440,96V320H1392C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320H0V64Z"%3E%3C/path%3E%3C/svg%3E');
+    background-size: cover;
+    z-index: -1;
+}
+
+.printer-container {
+    position: relative;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 80px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.printer-container:hover {
+    transform: scale(1.05);
+}
+
+.printer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.printer-overlay h3 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+
+.printer-overlay ul {
+    list-style: none;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+}
+
+.printer-overlay ul li {
+    margin: 5px 0;
+}
+
+.printer-overlay ul li::before {
+    content: "• ";
+    color: #ffd700;
+}
+
+.qr-container {
+    text-align: center;
+}
+
+.qr-image {
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.qr-caption {
+    font-size: 18px;
+    color: #008000;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+}
+
+.contact-info {
+    font-size: 18px;
+    color: #444;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
